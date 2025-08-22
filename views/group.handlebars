@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap" rel="stylesheet">
+
+    {{!-- <script src="https://code.jquery.com/jquery.js"></script> --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+    <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-158821739-2', 'auto');
+ga('require','GTM-MR6F264');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+  </head>
+  <body class="background">
+
+      {{#if empty}}
+        <div class="notification">
+          <div class="message">You have no items currently. Try moving an item from the "Personal" tab by hitting the "Share" button on an item!</div>
+        </div>
+      {{/if}}
+
+      {{#if viewAlt}}
+
+        <div class="container">
+          {{#each foodItems}}
+            <div class="square" id="{{id}}">
+              <img src="{{imageURL}}" alt="{{imageName}}" class="picture"></img>
+
+              <div class="options">
+
+                <div class="option" id="claim">
+                  <img src="images/icons/claim.svg" alt="claim" class="button move_b claim" id="group{{id}}"></img>
+                </div>
+
+                <div class="option" id="remove">
+                  <img src="images/icons/remove.svg" alt="remove" class="button remove_b" id="remove{{id}}"></img>
+                </div>
+
+              </div>
+            </div>
+          {{/each}}
+        </div>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <div class="navbar">
+          <div class="tab">
+            <a href="/home_b">
+              <img src="images/icons/personalGrey.svg" alt="personal" class="icon"></img>
+            </a>
+            <!-- personal -->
+          </div>
+
+          <div class="tab active">
+            <a href="/group_b">
+              <img src="images/icons/group.svg" alt="group" class="icon"></img>
+            </a>
+          </div>
+
+          <div class="tab">
+            <a href="/addForm_b">
+              <img src="images/icons/addItemGrey.svg" alt="camera" class="icon"></img>
+            </a>
+          </div>
+
+          <div class="tab">
+            <a href="/settings_b">
+              <img src="images/icons/settingsGrey.svg" alt="settings" class="icon"></img>
+            </a>
+          </div>
+        </div>
+
+      {{else}}
+
+        <div class="container">
+          {{#each foodItems}}
+            <div class="box" id="{{id}}">
+              {{!-- <div class="picture"> --}}
+              <img src="{{imageURL}}" alt="{{imageName}}" class="picture"></img>
+              {{!-- </div> --}}
+              <div class="boxText">
+                <h2>{{imageName}}</h2>
+              </div>
+
+
+              <div class="options">
+
+                <div class="option" id="claim">
+                  <img src="images/icons/claim.svg" alt="claim" class="button move_a" id="group{{id}}"></img>
+                </div>
+
+                <div class="option" id="remove">
+                  <img src="images/icons/remove.svg" alt="remove" class="button remove_a" id="remove{{id}}"></img>
+                </div>
+
+              </div>
+            </div>
+          {{/each}}
+        </div>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <div class="navbar">
+          <div class="tab">
+            <a href="/home">
+              <img src="images/icons/personalGrey.svg" alt="personal" class="icon"></img>
+            </a>
+            <!-- personal -->
+          </div>
+
+          <div class="tab active">
+            <a href="/group">
+              <img src="images/icons/group.svg" alt="group" class="icon"></img>
+            </a>
+          </div>
+
+          <div class="tab">
+            <a href="/addForm">
+              <img src="images/icons/addItemGrey.svg" alt="camera" class="icon"></img>
+            </a>
+          </div>
+
+          <div class="tab">
+            <a href="/settings">
+              <img src="images/icons/settingsGrey.svg" alt="settings" class="icon"></img>
+            </a>
+          </div>
+        </div>
+
+      {{/if}}
+
+
+    <script src="js/group.js"></script>
+  </body>
+</html>
+
+<!-- <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/settings.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-158821739-2', 'auto');
+ga('require','GTM-MR6F264');
+
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+  </head>
+  <body class="background">
+
+    <style>
+      a { text-decoration: none; }
+    </style>
+
+    <div class="container">
+
+      <h1>Current House Code</h1>
+
+      <div class="qr_display">
+        <h2>{{currentHouseName}}</h2>
+        <img src="images/other/qr_code.svg" alt="qr code"></img>
+        <h2>{{currentHouseCode}}</h2>
+      </div>
+
+      <br />
+
+      <div class="houses">
+        <h1>Your Houses</h1>
+
+        {{#if housesExist}}
+
+          {{#each houses}}
+            <div id = {{id}}>
+              <form method="post" action="/home">
+                <input type="hidden" name="home_id" value="{{id}}"/>
+                <button type="submit" class="house">{{name}}</button>
+              </form>
+            </div>
+          {{/each}}
+
+        {{else}}
+
+          You are not in any houses currently
+
+        {{/if}}
+
+        <a href="/login">
+          <div class="house" id="botMargin" id="0">
+            +
+          </div>
+        </a>
+
+        <!-- <div class="house">
+          Parents' House
+        </div> -->
+      </div>
+
+
+    </div>
+
+    {{#if viewAlt}}
+
+      <div class="navbar">
+        <div class="tab">
+          <a href="/home_b">
+            <img src="images/icons/personalGrey.svg" alt="personal" class="icon"></img>
+          </a>
+          <!-- personal -->
+        </div>
+
+        <div class="tab">
+          <a href="/group_b">
+            <img src="images/icons/groupGrey.svg" alt="group" class="icon"></img>
+          </a>
+        </div>
+
+        <div class="tab">
+          <a href="/addForm_b">
+            <img src="images/icons/addItemGrey.svg" alt="camera" class="icon"></img>
+          </a>
+        </div>
+
+        <div class="tab active">
+          <a href="/settings_b">
+            <img src="images/icons/settings.svg" alt="settings" class="icon"></img>
+          </a>
+        </div>
+      </div>
+
+    {{else}}
+
+      <div class="navbar">
+        <div class="tab">
+          <a href="/home">
+            <img src="images/icons/personalGrey.svg" alt="personal" class="icon"></img>
+          </a>
+          <!-- personal -->
+        </div>
+
+        <div class="tab">
+          <a href="/group">
+            <img src="images/icons/groupGrey.svg" alt="group" class="icon"></img>
+          </a>
+        </div>
+
+        <div class="tab">
+          <a href="/addForm">
+            <img src="images/icons/addItemGrey.svg" alt="camera" class="icon"></img>
+          </a>
+        </div>
+
+        <div class="tab active">
+          <a href="/settings">
+            <img src="images/icons/settings.svg" alt="settings" class="icon"></img>
+          </a>
+        </div>
+      </div>
+
+    {{/if}}
+  </body>
+</html>
+
+<!-- <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->

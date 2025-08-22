@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/home.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap" rel="stylesheet">
+
+    {{!-- <script src="https://code.jquery.com/jquery.js"></script> --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+    <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-158821739-2', 'auto');
+ga('require','GTM-MR6F264');
+ga('send', 'pageview');
+
+// Feature detects Navigation Timing API support.
+if (window.performance) {
+  // Gets the number of milliseconds since page load
+  // (and rounds the result since the value must be an integer).
+  var timeSincePageLoadMove = Math.round(performance.now());
+
+  // Sends the timing hit to Google Analytics.
+  ga('send', 'timing', 'move', 'click', timeSincePageLoadMove);
+}
+
+// Feature detects Navigation Timing API support.
+if (window.performance) {
+  // Gets the number of milliseconds since page load
+  // (and rounds the result since the value must be an integer).
+  var timeSincePageLoadRemove = Math.round(performance.now());
+
+  // Sends the timing hit to Google Analytics.
+  ga('send', 'timing', 'remove', 'click', timeSincePageLoadRemove);
+}
+
+
+</script>
+<!-- End Google Analytics -->
+
+  </head>
+  <body class="background">
+
+      {{#if empty}}
+        <div class="notification">
+          <div class="message">You have no items currently. Try adding an item with "Add Item" on the navbar!</div>
+        </div>
+      {{/if}}
+
+      {{#if viewAlt}}
+
+        <div class="container">
+
+          {{#each foodItems}}
+            <div class="square" id="{{id}}">
+              <img src="{{imageURL}}" alt="{{imageName}}" class="picture"></img>
+
+              <div class="options">
+
+                <div class="option" id="share">
+                  <img src="images/icons/share.svg" alt="share" class="button move_b" id="food{{id}}"></img>
+                </div>
+
+                <div class="option" id="remove">
+                  <img src="images/icons/remove.svg" alt="remove" class="button remove_b" id="remove{{id}}"></img>
+                </div>
+
+              </div>
+            </div>
+          {{/each}}
+        </div>
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+
+        <div class="navbar">
+          <div class="tab active">
+            <a href="/home_b">
+              <img src="images/icons/personal.svg" alt="personal" class="icon"></img>
+            </a>
+            <!-- personal -->
+          </div>
+
+          <div class="tab">
+            <a href="/group_b">
+              <img src="images/icons/groupGrey.svg" alt="group" class="icon"></img>
+            </a>
+          </div>
+
+          <div class="tab">
+            <a href="/addForm_b">
+              <img src="images/icons/addItemGrey.svg" alt="camera" class="icon"></img>
+            </a>
+          </div>
+
+          <div class="tab">
+            <a href="/settings_b">
+              <img src="images/icons/settingsGrey.svg" alt="settings" class="icon"></img>
+            </a>
+          </div>
+        </div>
+
+
+
+      {{else}}
+
+        <div class="container">
+          {{#each foodItems}}
+            <div class="box" id="{{id}}">
+              {{!-- <div class="picture"> --}}
+              <img src="{{imageURL}}" alt="{{imageName}}" class="picture"></img>
+              {{!-- </div> --}}
+              <div class="boxText">
+                <h2>{{imageName}}</h2>
+              </div>
+
+
+              <div class="options">
+
+                <div class="option" id="share">
+                  <img src="images/icons/share.svg" alt="share" class="shareButton move_a" id="food{{id}}"></img>
+                </div>
+
+                <div class="option" id="remove">
+                  <img src="images/icons/remove.svg" alt="remove" class="button remove_a" id="remove{{id}}"></img>
+                </div>
+
+              </div>
+            </div>
+          {{/each}}
+        </div>
+
+
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+
+        <div class="navbar">
+          <div class="tab active">
+            <a href="/home">
+              <img src="images/icons/personal.svg" alt="personal" class="icon"></img>
+            </a>
+            <!-- personal -->
+          </div>
+
+          <div class="tab">
+            <a href="/group">
+              <img src="images/icons/groupGrey.svg" alt="group" class="icon"></img>
+            </a>
+          </div>
+
+          <div class="tab">
+            <a href="/addForm">
+              <img src="images/icons/addItemGrey.svg" alt="camera" class="icon"></img>
+            </a>
+          </div>
+
+          <div class="tab">
+            <a href="/settings">
+              <img src="images/icons/settingsGrey.svg" alt="settings" class="icon"></img>
+            </a>
+          </div>
+        </div>
+
+      {{/if}}
+
+
+    <script src="js/home.js"></script>
+  </body>
+</html>
+
+<!-- <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div> -->

@@ -1,0 +1,331 @@
+.hidden {
+  display: none;
+}
+
+.background {
+  background-color: #EEEEEE;
+}
+
+.container {
+  /* height: 2436px; */
+  /* width: 1125px; */
+  /* background-color: powderblue; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.add {
+  height: 120px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10em;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+  /* height: 200px;
+  width: 200px;
+  margin: 50px 50px 50px 50px;
+  margin: auto;
+  margin: 10px 10px 10px 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: #555;
+  flex: 0 50%;
+  text-align: center;
+  Following line used for aligning options
+  position: relative; */
+}
+
+#addForm {
+  font-family: 'Montserrat';
+  /* display: none; */
+}
+
+.box {
+  /* height: 200px; */
+  /* width: 200px; */
+  height: 120px;
+  width: 90%;
+  /* margin: 50px 50px 50px 50px; */
+  /* margin: 10px 10px 10px 10px; */
+  /* margin: auto; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  /* flex: 0 50%; */
+  /* text-align: center; */
+
+  /* Following line used for aligning options */
+  position: relative;
+  display: flex;
+}
+
+.box .picture {
+  max-height: 80px;
+  max-width: 25%;
+  height: auto;
+  width: auto;
+  float: left;
+
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.box .itemImg {
+  /* display: block; */
+  /* margin: auto; */
+  /* text-align: center; */
+  /* margin-top: 10%; */
+  /* height: 70%; */
+  margin-top: auto;
+
+  margin-bottom: auto;
+
+  height: 100%;
+  width: auto;
+  /* max-width: 30%; */
+}
+
+.box .options {
+  height: 100%;
+  width: 85px;
+  margin-right: 5px;
+}
+
+.box .option {
+  height: 30%;
+  margin-top: 1em;
+}
+
+.box .button{
+  height: 38px;
+  margin-left: auto;
+margin-right: auto;
+  /* margin-top: 0.5em; */
+  /* height: 15px; */
+}
+
+/* .box .shareButton{
+  text-align: right;
+  float: right;
+  height: 25px;
+
+  margin-right: 1.5em;
+
+  margin-top: 0.5em;
+  height: 15px;
+} */
+
+.box .boxText{
+  width: 90%;
+  margin-top: auto;
+  margin-bottom: auto;
+  float: right;
+}
+
+h2 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 30px;
+  color: #000000;
+
+}
+
+/* Change the color of links on hover */
+.options .option:hover {
+  color: black;
+}
+
+.navbar {
+  background-color: #ffffff;
+  /* overflow: hidden; */
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar .tab {
+  width: 25%;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  /* margin-top: 10px; */
+  /* margin-bottom: 10px; */
+}
+
+
+.icon{
+  height: 50px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+h3 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 42px;
+  color: #000000;
+  text-align: center;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+  color: #000000;
+}
+
+/* .move{
+  margin-right: 1.5em;
+} */
+
+
+.moveStyle{
+  margin-right: 1.5em;
+}
+
+
+
+/* AB TESTING:  */
+.square {
+  height: 150px;
+  width: 150px;
+  /* margin: 50px 50px 50px 50px; */
+  /* margin: 10px 10px 10px 10px; */
+  /* margin: auto; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  /* flex: 0 50%; */
+  text-align: center;
+
+  /* Following line used for aligning options */
+  position: relative;
+}
+
+.square .picture {
+  /* display: block; */
+  /* margin: auto; */
+  /* text-align: center; */
+  margin-top: 1em;
+  margin-bottom: auto;
+  height: auto;
+  width: auto;
+  max-width: 50%;
+}
+
+.square .options {
+  position: absolute;
+  bottom: 0;
+  /* border-style: solid; */
+  /* border-width: 1px; */
+  width: 100%;
+  display: flex;
+}
+
+.square .option{
+  width: 50%;
+  border-style: solid;
+  border-width: 0px;
+}
+
+.square .button{
+  height: 2em;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-top: 5px;
+  margin-bottom: 8px; */
+  display: block;
+}
+
+.square .claim {
+  margin-bottom: 5px;
+}
+
+.addOld {
+  height: 200px;
+  width: 200px;
+  /* margin: 50px 50px 50px 50px; */
+  /* margin: 10px 10px 10px 10px; */
+  /* margin: auto; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* background-color: #555; */
+  /* flex: 0 50%; */
+  text-align: center;
+
+  /* Following line used for aligning options */
+  position: relative;
+
+
+  background: #FFFFFF;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  position: relative;
+  display: flex;
+}
+
+.addOld h3 {
+  font-family: 'Montserrat';
+  font-style: normal;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 90px;
+  color: #000000;
+  text-align: center;
+
+  margin-top: 35px;
+  margin-bottom: 35px;
+}
+
+.message {
+  font-family: 'Montserrat';
+  font-style: normal;
+  /* text-transform: capitalize; */
+  /* font-weight: bold; */
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+
+  padding: 10px 10px 10px 10px;
+  margin-top: 35px;
+}
+
+.notification {
+  background: #67c58f;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+}

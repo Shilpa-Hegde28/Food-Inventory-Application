@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/open.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap" rel="stylesheet">
+
+  <!-- Google Analytics -->
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-158821739-2', 'auto');
+ga('require','GTM-MR6F264');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
+</head>
+<body class="background">
+
+  <div class="container1 topMargin">
+
+    <a href="/">
+      <div class="back">
+        <img src="images/icons/backWhite.svg" alt="back"></img>
+      </div>
+    </a>
+
+    <div class="houses">
+      <h4>Your Houses</h4>
+
+      {{#if housesExist}}
+
+        {{#each houses}}
+          <div id = {{id}}>
+            <form method="post" action="/home">
+              <input type="hidden" name="home_id" value="{{id}}"/>
+              <button type="submit" class="house">{{name}}</button>
+            </form>
+          </div>
+        {{/each}}
+
+      {{else}}
+
+        You are not in any houses currently
+
+      {{/if}}
+    </div>
+
+    <h4>New House</h4>
+
+    <a href="/joinHome">
+      <div class="topMargin">
+        <p class="house2">Join Home</p>
+      </div>
+    </a>
+    <br>
+    <a href="/newHome">
+      <div>
+        <p class="house2">New Home</p>
+      </div>
+    </a>
+
+  </div>
+
+
+  <!-- <script src="js/home.js"></script> -->
+</body>
+</html>
